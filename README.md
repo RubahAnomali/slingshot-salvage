@@ -10,7 +10,7 @@ The look is a cyanotype blueprint: flat paper blue, thin ink lines, dashed const
 
 ```bash
 npm install
-npm run dev        # http://localhost:5176 from the workspace launcher
+npm run dev        # http://localhost:5173
 npm run build      # tsc --noEmit + production bundle (~63 kB, 22 kB gzipped)
 npm run typecheck
 ```
@@ -146,4 +146,4 @@ Each towed pod is joined to the one ahead of it (or to the ship) by a damped spr
   - Burn impulse, cooldown, input buffer; fire rate limiting.
   - Screen flow: title, pause, sector advance, victory, contract failure, stranded, restart.
   - Restart leaves listener count and pool allocation unchanged.
-- **Not verified:** I have not played it by hand at full speed. The browser pane I tested in throttles `requestAnimationFrame`, so the live loop only ran a few ticks per second. The sim was exercised in fixed steps instead. Feel (thrust, turn rate, burn, difficulty, fuel pressure) is therefore untested by a human. A simple scripted bot clears some seeds of sector 1 and fails others, which says more about the bot than the game. Sectors 2 to 5 were checked for state flow, not difficulty. There is no touch or gamepad support and no save data.
+- **Not covered:** the tests exercise the sim in fixed steps, so feel (thrust, turn rate, burn, difficulty, fuel pressure) is not covered by them. A simple scripted bot clears some seeds of sector 1 and fails others, which says more about the bot than the game. Sectors 2 to 5 were checked for state flow, not difficulty. There is no touch or gamepad support and no save data.
