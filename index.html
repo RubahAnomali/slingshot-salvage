@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Slingshot Salvage</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #0a1f38; overflow: hidden; }
+  canvas { display: block; width: 100vw; height: 100vh; }
+  #debug {
+    position: fixed; top: 8px; right: 8px; width: 330px; padding: 10px 12px;
+    background: rgba(8, 20, 36, 0.92); color: #cfe6d8; border: 1px solid #7bffb0;
+    font: 11px/1.4 Consolas, "Courier New", monospace; z-index: 10; max-height: 96vh; overflow: auto;
+  }
+  #debug[hidden] { display: none; }
+  #debug h3 { margin: 0 0 6px; font-size: 12px; color: #7bffb0; letter-spacing: 1px; }
+  #debug pre { margin: 0 0 8px; white-space: pre-wrap; font: inherit; }
+  #debug .row { display: flex; flex-wrap: wrap; gap: 4px 10px; margin: 6px 0; }
+  #debug .slider { display: grid; grid-template-columns: 92px 1fr 40px; gap: 6px; align-items: center; margin: 2px 0; }
+  #debug input[type=range] { width: 100%; accent-color: #7bffb0; }
+  #debug button { background: transparent; color: #7bffb0; border: 1px solid #7bffb0; font: inherit; padding: 2px 6px; cursor: pointer; }
+  #debug button:hover { background: #7bffb0; color: #081424; }
+</style>
+</head>
+<body>
+<canvas id="game"></canvas>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
