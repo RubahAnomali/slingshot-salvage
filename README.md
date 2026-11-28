@@ -146,4 +146,5 @@ Each towed pod is joined to the one ahead of it (or to the ship) by a damped spr
   - Burn impulse, cooldown, input buffer; fire rate limiting.
   - Screen flow: title, pause, sector advance, victory, contract failure, stranded, restart.
   - Restart leaves listener count and pool allocation unchanged.
+- **Playtested by hand.** The author has played the whole game personally and had friends play it. The notes below about bots describe the automated checks; feel and difficulty have been judged by real players, though no formal playtest data (win rates, timings) was recorded.
 - **Not covered:** the tests exercise the sim in fixed steps, so feel (thrust, turn rate, burn, difficulty, fuel pressure) is not covered by them. A simple scripted bot clears some seeds of sector 1 and fails others, which says more about the bot than the game. Sectors 2 to 5 were checked for state flow, not difficulty. There is no touch or gamepad support and no save data.
